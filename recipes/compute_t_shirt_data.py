@@ -23,9 +23,6 @@ df = pd.read_csv(BytesIO(data))
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 df['total'] = df['tshirt_price'] * df['tshirt_quantity']
-# create new column that shows the total amount in Japanese yen (original total amount is in dollars)
-df['total_in_yen'] = df['tshirt_price'] * df['tshirt_quantity'] * 143.95
-
 # update text category description
 df['tshirt_category'] = df['tshirt_category'].str.replace('Wh ', 'White ')
 

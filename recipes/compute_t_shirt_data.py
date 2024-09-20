@@ -26,8 +26,6 @@ df['total'] = df['tshirt_price'] * df['tshirt_quantity']
 # update text category description
 df['tshirt_category'] = df['tshirt_category'].str.replace('Wh ', 'White ')
 
-# Neba made edits
-# Lauren made edits
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 processed_dataset_df = df
@@ -37,5 +35,3 @@ processed_dataset_df = df
 # Dataset processed_data renamed to t_shirt_data by neba.nfonsang on 2024-09-16 20:58:07
 processed_dataset = dataiku.Dataset("t_shirt_data")
 processed_dataset.write_with_schema(processed_dataset_df)
-
-# testing push and pull still works

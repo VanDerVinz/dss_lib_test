@@ -49,7 +49,7 @@
         ],
         "timezone_id": "UTC",
         "appliesTo": "SINGLE_COLUMN",
-        "lang": "auto"
+        "lang": "fr_FR"
       },
       "alwaysShowComment": false
     },

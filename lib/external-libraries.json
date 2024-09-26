@@ -4,6 +4,10 @@
       "remote": "git@github.com:dataiku/vanguard-sec-projects.git",
       "checkout": "refs/heads/main",
       "remotePath": "data_prep",
+      "lastHash": "46775fa1dc4a54fb9a3aab52ee12a69cc1c7690f",
+      "conflictingFiles": [],
+      "resolvedFiles": [],
+      "faultyHash": "",
       "isDirty": false
     }
   },

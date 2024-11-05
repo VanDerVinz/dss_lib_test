@@ -225,7 +225,11 @@
   },
   "description": "This standard enablement project on “Git and DSS” provides step-by-step walk-throughs (with screenshots) on:\n- The built-in DSS version control features.\n- How to conduct merges entirely within DSS (feature available in DSS starting in version 13.1.0).\n- How to conduct merges outside of DSS (using GitHub) and pull those changes into DSS. \n\nYou can use this deck: https://docs.google.com/presentation/d/1e6osFqOALDkflHFp8vUmB051KYfFUE6itWU1lhskmLI/edit?pli\u003d1#slide\u003did.g2f961ea252d_0_19 \n\nNote: If you need to do a live presentation of the remote workflow with GitHub, you will need to create the process locally with your own private GitHub repo or ask IT to give your ds-cluster project access to a GitHub repository.\n",
   "shortDesc": "The project *Collaboration with Git and DSS* was created by Neba Nfonsang on Sep 20th 2024",
-  "tags": [],
+  "tags": [
+    "Asset:Standard Enablement Content",
+    "Technical Dimension:GIT",
+    "Technical Dimension:Version control"
+  ],
   "customFields": {
     "gdpr_forbid_dataset_sharing": false,
     "gdpr_forbid_dataset_export": false,

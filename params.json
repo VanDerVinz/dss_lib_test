@@ -9,12 +9,13 @@
   "projectType": "REGULAR",
   "projectAppType": "REGULAR",
   "hasSetupSection": false,
-  "owner": "anna.minges",
+  "owner": "api:dkuimk-KxqAToYivGWJgMGt",
   "permissionsVersion": "V2",
   "permissions": [
     {
       "group": "ALL_DS",
       "admin": false,
+      "editPermissions": false,
       "readProjectContent": false,
       "writeProjectContent": false,
       "exportDatasetsData": true,
@@ -32,6 +33,7 @@
     {
       "group": "explorers",
       "admin": false,
+      "editPermissions": false,
       "readProjectContent": false,
       "writeProjectContent": false,
       "exportDatasetsData": true,
@@ -49,6 +51,7 @@
     {
       "group": "misc_contributors",
       "admin": false,
+      "editPermissions": false,
       "readProjectContent": false,
       "writeProjectContent": false,
       "exportDatasetsData": true,
@@ -66,6 +69,7 @@
     {
       "user": "sylvain.ferrandiz",
       "admin": false,
+      "editPermissions": false,
       "readProjectContent": false,
       "writeProjectContent": true,
       "exportDatasetsData": true,
@@ -90,7 +94,9 @@
     "flowDisplaySettings": {
       "zonesGraphRenderingAlgorithm": "DOT_OLDRANK",
       "zonesGraphConnectZones": true,
-      "zonesGraphForJobs": true
+      "zonesGraphForJobs": true,
+      "respectTraversalOrder": false,
+      "zonesManualPositioning": false
     },
     "gitCommitMode": "AUTO",
     "useRemoteGit": true,
@@ -209,7 +215,6 @@
     "dkuProperties": []
   },
   "name": "Collaboration with Git and DSS",
-  "projectStatus": "SEC",
   "imgPattern": 5,
   "metrics": {
     "probes": [],
@@ -279,7 +284,8 @@
   "tags": [
     "Asset:Standard Enablement Content",
     "Technical Dimension:GIT",
-    "Technical Dimension:Version control"
+    "Technical Dimension:Version control",
+    "duplicated"
   ],
   "customFields": {
     "gdpr_forbid_dataset_sharing": false,

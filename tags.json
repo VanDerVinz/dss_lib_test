@@ -1,7 +1,10 @@
 {
   "tags": {
-    "Asset:Standard Enablement Content": {},
+    "duplicated": {
+      "color": "#3A85AD"
+    },
     "Technical Dimension:GIT": {},
+    "Asset:Standard Enablement Content": {},
     "Technical Dimension:Version control": {}
   }
 }

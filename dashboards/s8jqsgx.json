@@ -1,41 +1,42 @@
 {
-  "pages": [
-    {
-      "id": "vct6yW4",
-      "grid": {
-        "tiles": []
-      },
-      "show": true,
-      "showTitle": false,
-      "titleAlign": "CENTER",
-      "titleFontColor": "#444444",
-      "titleFontSize": 28,
-      "enableCrossFilters": true,
-      "backgroundColor": "#ffffff",
-      "showFilterPanel": true,
-      "filtersParams": {
-        "panelPosition": "TOP",
-        "engineType": "LINO"
-      }
-    }
-  ],
-  "owner": "neba.nfonsang",
-  "listed": true,
-  "name": "Collaboration with Git and DSS\u0027s default dashboard",
-  "showGrid": false,
-  "showNavigationArrows": false,
-  "reloadWhenEventReceived": false,
+  "checklists": {
+    "checklists": []
+  },
+  "columnNumber": 36,
   "creationTag": {
-    "versionNumber": 0,
+    "extendedProperties": {},
     "lastModifiedBy": {
       "login": "neba.nfonsang"
     },
     "lastModifiedOn": 1726852134069,
-    "extendedProperties": {}
+    "versionNumber": 0
   },
-  "tags": [],
   "customFields": {},
-  "checklists": {
-    "checklists": []
-  }
+  "listed": true,
+  "name": "Collaboration with Git and DSS's default dashboard",
+  "owner": "neba.nfonsang",
+  "pages": [
+    {
+      "backgroundColor": "#ffffff",
+      "enableCrossFilters": true,
+      "filtersParams": {
+        "engineType": "LINO",
+        "panelPosition": "TOP"
+      },
+      "grid": {
+        "tiles": []
+      },
+      "id": "vct6yW4",
+      "show": true,
+      "showFilterPanel": true,
+      "showTitle": false,
+      "titleAlign": "CENTER",
+      "titleFontColor": "#444444",
+      "titleFontSize": 28
+    }
+  ],
+  "reloadWhenEventReceived": false,
+  "showGrid": false,
+  "showNavigationArrows": false,
+  "tags": []
 }

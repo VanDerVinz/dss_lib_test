@@ -1,150 +1,40 @@
 {
-  "type": "S3",
-  "managed": true,
-  "featureGroup": false,
-  "formatType": "parquet",
   "checklists": {
     "checklists": []
   },
   "checks": [],
-  "customMeta": {
-    "kv": {}
-  },
-  "flowOptions": {
-    "virtualizable": false,
-    "rebuildBehavior": "NORMAL",
-    "crossProjectBuildBehavior": "DEFAULT"
-  },
-  "readWriteOptions": {
-    "preserveOrder": false,
-    "writeBuckets": 1,
-    "forceSingleOutputFile": false,
-    "defaultReadOrdering": {
-      "enabled": false,
-      "rules": []
-    }
-  },
-  "formatParams": {
-    "parquetLowerCaseIdentifiers": false,
-    "representsNullFields": false,
-    "parquetCompressionMethod": "SNAPPY",
-    "parquetFlavor": "HIVE",
-    "parquetBlockSizeMB": 128
-  },
-  "partitioning": {
-    "ignoreNonMatchingFile": false,
-    "considerMissingRequestedPartitionsAsEmpty": false,
-    "dimensions": []
-  },
   "creationTag": {
-    "versionNumber": 0,
+    "extendedProperties": {},
     "lastModifiedBy": {
       "login": "lauren.diperna"
     },
     "lastModifiedOn": 1726852905564,
-    "extendedProperties": {}
+    "versionNumber": 0
   },
-  "tags": [],
-  "params": {
-    "bucket": "dku-ds-platform-data",
-    "metastoreSynchronizationEnabled": true,
-    "metastoreTableName": "t_shirt_data_prepared",
-    "connection": "s3",
-    "path": "/dataiku/${projectKey}/t_shirt_data_prepared",
-    "notReadyIfEmpty": false,
-    "filesSelectionRules": {
-      "mode": "ALL",
-      "excludeRules": [],
-      "includeRules": [],
-      "explicitFiles": []
-    },
-    "variablesExpansionLoopConfig": {
-      "enabled": false,
-      "mode": "CREATE_VARIABLE_FOR_EACH_COLUMN",
-      "replacements": []
-    }
+  "customFields": {
+    "gdpr_contains_personal_data": "UNSURE"
   },
-  "schema": {
-    "columns": [
-      {"name":"order_date","type":"string"},
-      {"name":"order_date_parsed","type":"date"},
-      {"name":"pages_visited","type":"bigint"},
-      {"name":"order_id","type":"string"},
-      {"name":"customer_id","type":"string"},
-      {"name":"tshirt_category","type":"string"},
-      {"name":"tshirt_price","type":"double"},
-      {"name":"tshirt_quantity","type":"bigint"},
-      {"name":"total","type":"double"},
-      {"name":"total_euro","type":"double"},
-      {"name":"total_yen","type":"double"}
-    ],
-    "userModified": true
+  "customMeta": {
+    "kv": {}
   },
   "dkuProperties": [],
+  "featureGroup": false,
+  "flowOptions": {
+    "crossProjectBuildBehavior": "DEFAULT",
+    "rebuildBehavior": "NORMAL",
+    "virtualizable": false
+  },
+  "formatParams": {
+    "parquetBlockSizeMB": 128,
+    "parquetCompressionMethod": "SNAPPY",
+    "parquetFlavor": "HIVE",
+    "parquetLowerCaseIdentifiers": false,
+    "readTemporalMode": "AS_RAW",
+    "representsNullFields": false
+  },
+  "formatType": "parquet",
+  "managed": true,
   "metrics": {
-    "probes": [
-      {
-        "type": "basic",
-        "enabled": true,
-        "computeOnBuildMode": "PARTITION",
-        "meta": {
-          "name": "Basic data",
-          "level": 0
-        },
-        "configuration": {}
-      },
-      {
-        "type": "records",
-        "enabled": true,
-        "computeOnBuildMode": "NO",
-        "meta": {
-          "name": "Record count",
-          "level": 0
-        },
-        "configuration": {}
-      }
-    ],
-    "engineConfig": {
-      "padRunsWithMetrics": false,
-      "hive": {
-        "active": true,
-        "extraConf": []
-      },
-      "basic": {},
-      "dss": {
-        "active": true,
-        "selection": {
-          "useMemTable": false,
-          "filter": {
-            "distinct": false,
-            "enabled": false
-          },
-          "partitionSelectionMethod": "ALL",
-          "latestPartitionsN": 1,
-          "ordering": {
-            "enabled": false,
-            "rules": []
-          },
-          "samplingMethod": "FULL",
-          "maxRecords": -1,
-          "targetRatio": 0.02,
-          "ascending": true,
-          "withinFirstN": -1,
-          "maxReadUncompressedBytes": -1
-        }
-      },
-      "sql": {
-        "active": true
-      },
-      "impala": {
-        "active": true
-      },
-      "spark": {
-        "active": true,
-        "extraConf": []
-      },
-      "python": {}
-    },
     "displayedState": {
       "columns": [],
       "metrics": [
@@ -153,16 +43,161 @@
         "basic:SIZE",
         "records:COUNT_RECORDS"
       ]
-    }
+    },
+    "engineConfig": {
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "ascending": true,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "latestPartitionsN": 1,
+          "maxReadUncompressedBytes": -1,
+          "maxRecords": -1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "partitionSelectionMethod": "ALL",
+          "samplingMethod": "FULL",
+          "targetRatio": 0.02,
+          "useMemTable": false,
+          "withinFirstN": -1
+        }
+      },
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "impala": {
+        "active": true
+      },
+      "padRunsWithMetrics": false,
+      "python": {},
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "sql": {
+        "active": true
+      }
+    },
+    "probes": [
+      {
+        "computeOnBuildMode": "PARTITION",
+        "configuration": {},
+        "enabled": true,
+        "meta": {
+          "level": 0,
+          "name": "Basic data"
+        },
+        "type": "basic"
+      },
+      {
+        "computeOnBuildMode": "NO",
+        "configuration": {},
+        "enabled": true,
+        "meta": {
+          "level": 0,
+          "name": "Record count"
+        },
+        "type": "records"
+      }
+    ]
   },
   "metricsChecks": {
-    "monitor": false,
     "checks": [],
     "displayedState": {
       "checks": []
+    },
+    "monitor": false
+  },
+  "params": {
+    "bucket": "dku-ds-platform-data",
+    "connection": "s3",
+    "filesSelectionRules": {
+      "excludeRules": [],
+      "explicitFiles": [],
+      "includeRules": [],
+      "mode": "ALL"
+    },
+    "metastoreSynchronizationEnabled": true,
+    "metastoreTableName": "t_shirt_data_prepared",
+    "notReadyIfEmpty": false,
+    "path": "/dataiku/${projectKey}/t_shirt_data_prepared",
+    "variablesExpansionLoopConfig": {
+      "enabled": false,
+      "mode": "CREATE_VARIABLE_FOR_EACH_COLUMN",
+      "replacements": []
     }
   },
-  "customFields": {
-    "gdpr_contains_personal_data": "UNSURE"
-  }
+  "partitioning": {
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": [],
+    "ignoreNonMatchingFile": false
+  },
+  "readWriteOptions": {
+    "defaultReadOrdering": {
+      "enabled": false,
+      "rules": []
+    },
+    "forceSingleOutputFile": false,
+    "preserveOrder": false,
+    "writeBuckets": 1
+  },
+  "schema": {
+    "columns": [
+      {
+        "name": "order_date",
+        "type": "string"
+      },
+      {
+        "name": "order_date_parsed",
+        "type": "date"
+      },
+      {
+        "name": "pages_visited",
+        "type": "bigint"
+      },
+      {
+        "name": "order_id",
+        "type": "string"
+      },
+      {
+        "name": "customer_id",
+        "type": "string"
+      },
+      {
+        "name": "tshirt_category",
+        "type": "string"
+      },
+      {
+        "name": "tshirt_price",
+        "type": "double"
+      },
+      {
+        "name": "tshirt_quantity",
+        "type": "bigint"
+      },
+      {
+        "name": "total",
+        "type": "double"
+      },
+      {
+        "name": "total_euro",
+        "type": "double"
+      },
+      {
+        "name": "total_yen",
+        "type": "double"
+      }
+    ],
+    "userModified": true
+  },
+  "tags": [],
+  "type": "S3",
+  "typeSystemVersion": "V1"
 }

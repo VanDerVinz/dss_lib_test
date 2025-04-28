@@ -71,7 +71,7 @@
   "tags": [],
   "params": {
     "connection": "filesystem_managed",
-    "path": "/COLLABORATIONWITHGITANDDSSVINCENTBRETON.t_shirt_data_by_tshirt_category",
+    "path": "/DEMO_GIT_DEV_1.t_shirt_data_by_tshirt_category",
     "notReadyIfEmpty": false,
     "filesSelectionRules": {
       "mode": "ALL",

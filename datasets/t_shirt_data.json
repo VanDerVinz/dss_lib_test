@@ -98,7 +98,7 @@
       {"name":"total_yen","type":"double"},
       {"name":"total_euro","type":"double"}
     ],
-    "userModified": true
+    "userModified": false
   },
   "typeSystemVersion": "V1",
   "dkuProperties": [],

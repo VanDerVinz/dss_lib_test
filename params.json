@@ -9,7 +9,7 @@
   "projectType": "REGULAR",
   "projectAppType": "REGULAR",
   "hasSetupSection": false,
-  "owner": "vincent.breton",
+  "owner": "admin",
   "permissionsVersion": "V2",
   "permissions": [],
   "additionalDashboardUsers": {
@@ -26,7 +26,6 @@
       "zonesManualPositioning": false
     },
     "gitCommitMode": "AUTO",
-    "useRemoteGit": true,
     "disableAutomaticTriggers": false,
     "integrations": {
       "integrations": []
@@ -212,7 +211,8 @@
     "Asset:Standard Enablement Content",
     "Technical Dimension:GIT",
     "Technical Dimension:Version control",
-    "duplicated"
+    "duplicated",
+    "imported"
   ],
   "customFields": {
     "gdpr_forbid_dataset_sharing": false,

@@ -3,7 +3,8 @@
   "neverRecomputeExistingPartitions": false,
   "params": {
     "envSelection": {
-      "envMode": "INHERIT"
+      "envMode": "EXPLICIT_ENV",
+      "envName": "Dash"
     },
     "containerSelection": {
       "containerMode": "INHERIT"
